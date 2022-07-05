@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM & Seletores JS</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .lenda {
+    background-color: grey;
+    border:5px solid chartreuse;
+    color: white;
+    height:70px;
+    margin:10px;
+    text-align:center;
+    padding-top: 40px;
+    }
+    
+    .piloto-f1-atual {
+      border:1px solid black;
+      height: 70px;
+      margin:10px;
+      text-align:center;
+      padding-top: 40px;
+    }
+
+    .pilotos-com-titulo {
+      color: chartreuse;
+    }
+  </style>
+</head>
+  <body>
+    <h1>Dom & Seletores</h1>
+    <h2>* DOM (Document Object Model):</h2>
+      <p>
+        DOM é a estrutura que faz a ponte entre o HTML e o JavaScript e que permite interação entre os dois.
+      </p>
+    <h2>* Função .getElementById():</h2>
+      <p>
+        Retorna a referência do elemento através do seu ID.<br><br>
+        * Sintaxe:<br>
+        var elemento = document.getElementById("nome_da_id");<br><br>
+        - elemento é uma referência a um objeto Element, ou null se um elemento com o ID especificado não estiver contido neste documento.<br>
+        - id é uma string que diferência maiúsculas e minúsculas representando o ID único do elemento sendo procurado.
+      </p>
+      <div id="teste_div">
+        * Atenção!
+        esta é uma 'div' de teste para ser alterada através de sua 'id'.
+      </div>
+      <p id="teste_p">
+        * Atenção!
+        esta é uma tag 'p' de teste para ser alterada através de sua 'id'.
+      </p>
+    <h2>* Função .getElementsByClassName():</h2>
+      <p>
+        Retorna um vetor de objetos com todos os elementos filhos que possuem o nome da classe dada.  Quando invocado no objeto document, o documento é examinado por completo, incluindo o nó raiz. Você também pode invocar getElementsByClassName() em qualquer elemento; isso retornaria somente elementos que são descendentes do nó raiz especificado com o nome da classe.
+      </p>
+      <div class="pilotos-com-titulo">
+        <p class="lenda">Ayrton Senna</p>
+        <p class="piloto-f1-atual">Lewis Hamilton</p>
+        <p class="piloto-f1-atual">Sebastian Vettel</p>
+      </div>
+      <div class="pilotos-sem-titulo">
+        <p class="piloto-f1-atual">Lando Norris</p>
+        <div class="piloto-f1-atual">George Russel</div>
+        <div class="piloto-f1-atual">Daniel Riccardo</div>
+        <span class="piloto-f1-atual">Kevin Magnussen</span>
+      </div>
+      <p id="owner">Liberty Media</p>                                       
+    <h2>* Função.getElementsByTagName():</h2>
+      <p>
+        O método getElementsByTagName da interface Document retorna um HTMLCollection de elementos com o nome da tag quit. O documento completo é pesquisado, incluindo o nó raiz. A HTMLCollection retornada é ao vivo, o que significa que ela se atualiza automaticamente para permanecer em sincronia com a árvore DOM sem ter que chamar document.getElementsByTagName() novamente.<br>
+        Este método tem sua importância por retornar-nos uma lista de elementos, quando quisermos acessar ou alterar propriedades; ou buscar o conteúdo que tiver a mesma tag.
+      </p>
+    <h2>* Função .querySelector():</h2>
+      <p>
+        Retorna o primeiro elemento dentro do documento (usando ordenação em profundidade, pré-ordenada e transversal dos nós do documento) que corresponde ao grupo especificado de seletores.<br><br>
+        * Sintaxe:<br>
+        element = document.querySelector(selectors);<br><br>
+        - element é um objeto Element;<br>
+        - selectors é uma string que contém um ou mais seletores;<br>
+        - CSS separados por vírgulas;<br>
+        - Retorna apenas um elemento, o primeiro elemento;<br>
+        - Trabalha com seletores CSS;<br>
+        - Mais flexível que os getElementBy...
+      </p>
+    <h2>* Função .querySelectorAll():</h2>
+      <p>
+        Retorna uma lista de todos elementos presentes no documento (usando ordenação em profundidade, pré-ordenada e transversal dos nós do documento) que coincidam com o grupo de seletores especificado. O objeto retornado é uma NodeList.<br><br>
+        - [lista de Elementos];<br>
+        - Trabalha com seletores CSS;<br>
+        - Mais flexível que os getElementBy...<br>
+      </p> 
+    <h2>* HTML Collection X NodeList </h2>
+      <p>
+        Enquanto os getElementsByClassName('ClassName') e getElementsByTagName('TagName') retornam uma HTMLCollection, os querySelectorAll('.ClassName') e querySelectorAll('TagName') retornam uma NodeList.
+      </p>
+      <p>
+        A resposta mais simples é que tanto NodeList quanto HTMLCollection são coleções de nós DOM. A diferença é que enquanto um NodeList pode conter qualquer tipo de nó, o HTMLCollection conterá apenas qualquer elemento de nó.<br><br>
+        Então, qual é a diferença entre um elemento de nó e um tipo de nó?<br><br>
+        Nós: no DOM, tudo é um nó e cada nó é um objeto. O nó de nome é usado como um termo genérico, para tudo.<br><br>
+        Elemento: é um tipo específico de nó. Pode ser uma lista de itens, uma div, o body, uma janela, o que for, mas é um tipo específico.<br><br>
+        Agora podemos ver qual é a diferença entre um nodeList e o que é um elemento node:<br><br>
+        No final, uma é geral e outra é listas específicas de nós. É importante saber simplesmente porque você deve saber o que está retornando e para problemas de JavaScript mais avançados, como velocidade, no caso de NodeLists estático vs NodeLists ao vivo.
+      </p>
+      <p>
+        Uma interface HTMLCollection representa uma coleção geral (objeto array) de elementos (na ordem em métodos que não aparecem no documento) e oferece e propriedades para seleção da lista, contudo ele representa apenas elementos HTML.
+      </p>
+      <p>
+        Um NodeList pode parecer um array, mas, na realidade, ambos são duas coisas completamente diferentes. Um NodeList object é basicamente uma coleção de nós DOM extraídos do documento HTML, contudo pode possuir texto não necessariamente apenas de HTML. Um array é um tipo de dado especial em JavaScript, que pode armazenar uma coleção de elementos arbitrários.
+      </p>
+    <script src="dom_seletores.js">
+      console.log("É possível utilizar JS pelo HTML");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Histórico local para código do Visual Studio
+.história/
+
+# Extensões de código do Visual Studio construídas
+*.vsix
+
+### Patch VisualStudioCode ###
+# Ignora todo o histórico local de arquivos
+.história
+.ionida
+
+# Suporte para escopo do snippet de projeto
+.vscode/*.code-snippets
+
+# Ignora code-workspaces
+*.code-workspace
+
+# Fim de https://www.toptal.com/developers/gitignore/api/visualstudiocode

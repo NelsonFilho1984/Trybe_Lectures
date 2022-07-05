@@ -1,0 +1,7 @@
+
+O que estou aprendendo na Trybe:
+
+- Unix;
+- Bash;
+- Git;
+- Github;
