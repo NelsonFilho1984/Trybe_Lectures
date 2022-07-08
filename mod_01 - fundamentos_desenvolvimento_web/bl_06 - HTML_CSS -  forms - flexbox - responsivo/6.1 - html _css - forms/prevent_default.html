@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event: Prevent Default</title>
+  
+</head>
+<body>
+  <h1>Prevent Default</h1>
+  <form action="">
+    <input type="text" name="" id="input-name-user"placeholder="Digite seu nome">
+    <button type="submit" id="button-submit">Enviar</button>
+  </form>
+  <p id="name-user-p"></p>
+  <script>
+    /*
+    * Event.preventDefault():
+
+    Previne que o comportamento padrão de um evento seja executado; cancelando um evento se for cancelável, sem parar a programação do mesmo.
+
+    * Alguns exemplos de elementos e seus comportamentos:
+
+    <a href="www.google.com" target="_blank" id="href">Google</a>
+
+    Esse código gera um elemento clicável que redireciona o usuário para o buscador do Google. O atributo target="_blank" indica que o comportamento do elemento é abrir o link em outra aba do navegador.
+
+    <input type="text" id="input-text"/>
+
+    Esse código gera uma caixa de input de texto. O comportamento desse elemento é capturar o(s) caractere(s) digitado(s) pelo usuário e exibí-lo(s) dentro da caixa de texto, alterando o atributo "value" do input de acordo com o que é digitado.
+
+    <input type="checkbox" id="input-checkbox" />
+
+    Esse código gera um caixinha de input do tipo checkbox. O comportamento desse elemento é escutar o clique da pessoa usuária e marcar ou desmarcar a caixinha.
+    */
+    let inputNameUser = document.querySelector("#input-name-user");
+    const button = document.querySelector("#button-submit");
+    const nameUserP = document.querySelector("#name-user-p");
+
+    function getUserValue(event) {
+      //Esta função cancela o evento 'submit' do botão 'Enviar'. 
+      event.preventDefault(); 
+      console.log(inputNameUser.value);
+      nameUserP.innerHTML = inputNameUser.value; 
+    }
+    button.addEventListener('click', getUserValue);
+  </script>
+</body>
+</html>

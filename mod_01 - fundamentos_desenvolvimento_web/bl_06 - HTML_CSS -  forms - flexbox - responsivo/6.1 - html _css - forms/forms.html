@@ -1,0 +1,125 @@
+<!--Forms-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms</title>
+</head>
+<body>
+  <h1>Forms</h1>
+  <!--
+    De modo geral, estes são os types que podem ser usados de acordo com a aplicação do campo input:
+
+    button: define um botão;
+    checkbox: permite que a pessoa usuária selecione ZERO ou MAIS opções de um número limitado de escolhas;
+    color: campos de entrada que devem conter uma cor para selecionar;
+    date: campos de entrada que devem conter uma data;
+    datetime-local: campo de entrada de data e hora, sem fuso horário;
+    email: campos de entrada que devem conter um endereço de e-mail;
+    file: campo de seleção de arquivo e um botão "Procurar" para uploads de arquivos;
+    month: permite que a pessoa usuária selecione um mês e ano;
+    number: define um campo de entrada numérico;
+    password: os caracteres do campo de senha são mascarados (mostrados como asteriscos ou círculos);
+    radio: permite que uma pessoa usuária selecione APENAS UMA de um número limitado de opções;
+    range: define um controle para inserir um número (como um controle deslizante). Intervalo padrão é de 0 a 100;
+    reset: redefinirá todos os valores do formulário para seus valores padrão;
+    search: usado para campos de pesquisa;
+    submit: envia dados de formulário a um manipulador de formulários(especificado na action do form);
+    tel: campos de entrada que devem conter um número de telefone;
+    text: campo de entrada de texto de linha única;
+    time: permite que a pessoa usuária selecione um horário (sem fuso horário);
+    url: campos de entrada que devem conter um endereço URL;
+    week: permite que a pessoa usuária selecione uma semana e um ano.
+
+    O valor default de um type, sempre será text. Portanto, é preciso especificar de acordo com a sua necessidade.
+
+    Como complemento, temos os atributos que são propriedades inseridas para seus inputs HTML. Com elas, você poderá adicionar funcionalidades ao seu formulário. Temos os seguintes atributos abaixo:
+
+    value: especifica um valor inicial para um campo de entrada;
+    readonly: especifica que um campo de entrada é somente leitura;
+    disabled: especifica que um campo de entrada deve ser desativado;
+    size: especifica a largura visível, em caracteres, de um campo de entrada;
+    maxlength: especifica o número máximo de caracteres permitidos em um campo de entrada;
+    min e max: especificam os valores mínimo e máximo para um campo de entrada;
+    multiple: especifica que a pessoa usuária tem permissão para inserir mais de um valor em um campo de entrada;
+    pattern: especifica uma expressão regular em relação à qual o valor do campo de entrada é verificado;
+    placeholder: especifica uma dica curta que descreve o valor esperado de um campo de entrada;
+    required: especifica que um campo de entrada deve ser preenchido antes de enviar o formulário;
+    step: especifica os intervalos de números válidos para um campo de entrada;
+    autofocus: especifica que um campo de entrada deve obter foco automaticamente quando a página é carregada;
+    height e width: especificam a altura e a largura de um elemento;
+    autocomplete: especifica se um campo de entrada deve ter o preenchimento automático ativado ou desativado.
+
+  -->
+  <form action=""method="GET">
+    <!--
+      >>> Atributos (ou Propriedades):
+      * 'action' - diz para onde o formulário será enviado;
+      * 'method' - 'GET' (dados enviados através da URL) ou 'POST' (dados enviados escondidos);
+    -->
+    <label for="input-text"><b>Nome</b></label>
+      <!--
+        >>> Atributos:
+        * 'for' - cria um vínculo entre o rótulo('label') e o campo de preenchimento em si, no caso usamos o propriedade 'id' da tag 'input' ("input-text");
+      -->
+    <input type="text" placeholder ="digite aqui" required value="" class="" id="input-text" name="texto">
+    <select name="gender" id="dropdown-gender">
+      <!--A tag 'select' cria um "dropdown list" para selecionar-->
+      <option value="">Masculino</option>
+      <option value="">Feminino</option>
+      <option value="">Outro</option>
+    </select>
+    
+    <br><br>
+      <!--
+        A tag 'input' determina qual tipo de entrada de dados o usuário irá fazer, neste caso é uma 'string'.
+        >>> Atributos:
+        * 'name' - é o nome de atribuição, quando estiver-mos manipulando a tag.
+        * 'placeholder' - é um texto opaco de orientação;
+        * 'required' - torna determinada parte do formulário obrigatória, sendo assim, impedido o seu envio;
+        * 'value' - traz dados pré-definidos;
+
+      -->
+    <label for="checkbox-ABC"><b>Escolha suas opções</b></label><br>
+    <input type="checkbox" value="optA" name="checkbox-ABC" id="opção-a" checked>opção A
+    <input type="checkbox" value="optB" name="checkbox-ABC" id="opção-b">opção B
+    <input type="checkbox" valeu="optC" name="checkbox-ABC" id="opção-c">opção C <br><br>
+      <!--
+        O 'input' 'checkbox' traz multiplas opções de escolha.
+        >>> Atributos:
+        * 'checked' - deixa uma opção pré-estabelecida;
+        * 'value' - que é o valor que ele irá receber;
+        * 'name' - o nome que irá passar para 'url' ao submeter o formulário;
+
+      -->
+    <label for="radio-123"><b>Escolha uma opção</b></label><br>
+    <input type="radio" name="radio-123" id="">opção 1
+    <input type="radio" name="radio-123" id="">opção 2
+    <input type="radio" name="radio-123" id="">opção 3
+      <!--
+        Atenção!
+        * O 'input' 'radio' traz escolhas únicas, contudo é necessário alinhar seu 'name'.
+        * Ao armazenar 'inputs' dentro de 'labels' e incluir na sua propriedade 'for' um 'id' criado para 'radio', é possível selecionar a opção por qualquer lugar da label e não apenas na 'radio option', isso ajuda muito na usabilidade, sobretudo em dispositivos móveis.
+        <label for="label-for-id">
+          <input type="radio" name="" id="label-for-id">
+        </label>
+      -->
+    <br><br>
+    <textarea name="" id="" cols="30" rows="10">Digite aqui suas observações:</textarea><br>
+      <!--
+        >>> Atributos:
+        * 'cols'(columns) - colunas;
+        * 'rows' - linhas;
+      -->
+    <input type="password" name="" id="" placeholder="digite sua senha" required>
+    <button type="submit">ENVIAR</button>
+      <!--
+        A tag 'button' cria um botão.
+        >>> Atributos:
+        * 'type' é uma propriedade para submeter(enviar) os dados do formulário;
+      -->
+  </form>
+</body>
+</html>
