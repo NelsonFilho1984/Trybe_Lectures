@@ -4,46 +4,54 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bootstrap</title>
+  <title>form_bootstrap</title>
 
   <link rel="stylesheet" href="bootstrap-5.2.0-beta1-dist/css/bootstrap.min.css">
-  <script src="jquery-3.6.0.min.js"></script>
-  <script src="bootstrap-5.2.0-beta1-dist/js/bootstrap.min.js"></script>
+  <script src="jquery-3.6.0.min.js" defer></script>
+  <script src="bootstrap-5.2.0-beta1-dist/js/bootstrap.min.js" defer></script>
 </head>
-<body>
-  <h1>FORMULÁRIO</h1>
-  <main>
+<body class="bg-secondary bg-gradient">
+ <header class="container text-center text-light my-3">
+  <h1 class="display-2">FORMULÁRIO BASE</h1>
+  <p class="lead">
+    Form template utilizando Bootstrap
+  </p>
+ </header>
+  <main class="container lead">
     <form action="" method="get">
       <section>
-        <label for="input-name">Nome Completo
-          <input autofocus type="text" name="input-name" id="input-name" placeholder="digite seu nome" min="5" max="10" required>
-        </label>
-        <label for="input-email">e-mail
-          <input type="email" name="input-email" id="input-email" placeholder="digite seu e-mail" min="10" max="50">
-        </label>
-        <fieldset>
-          <legend>Opções</legend>
-          <label for="option-1">
-            <input type="radio" name="radio-option" id="option-1">Opção 1
+        <div class="mb-4">
+          <label class="form-label text-start text-light" for="input-name">Nome Completo</label>
+          <input class="form-control"autofocus type="text" name="input-name" id="input-name" placeholder="digite seu nome" min="5" max="10" required>
+        </div>
+        <div class="mb-4">
+          <label class="form-label text-light" for="input-email">e-mail</label>
+          <input class="form-control" type="email" name="input-email" id="input-email" placeholder="digite seu e-mail" min="10" max="50">
+        </div>
+        <fieldset class="form-check text-light mb-4">
+          <legend class="lead">Opções</legend>
+          <label class="form-check-label me-5" for="option-1">
+            <input class="form-check-input"type="radio" name="radio-option" id="option-1">Opção 1
           </label>
-          <label for="option-2">
-            <input type="radio" name="radio-option" id="option-2">Opção 2
+          <label class="form-check-label me-5" for="option-2">
+            <input class="form-check-input"type="radio" name="radio-option" id="option-2">Opção 2
           </label>
-          <label for="option-3">
-            <input type="radio" name="radio-option" id="option-3">Opção 3
+          <label class="form-check-label me-5" for="option-3">
+            <input class="form-check-input" type="radio" name="radio-option" id="option-3">Opção 3
           </label>
-          <label for="option-4">
-            <input type="radio" name="radio-option" id="option-4">Opção4
+          <label class="form-check-label" for="option-4">
+            <input class="form-check-input" type="radio" name="radio-option" id="option-4">Opção4
           </label>
         </fieldset>
-        <label for="input-txt">Comentário
-          <input type="text" name="" id="input-txt" placeholder="comente aqui" maxlength="500">
+        <div class="form-floating mb-4">
+          <textarea class="form-control text-mute" name="input-txt" id="input-txt" style="height: 100px;"maxlength="500" placeholder="Comente aqui"></textarea>
+          <label for="input-txt">Comentários</label>
+        </div>
+        <label class="form-check-label text-light mb-4" for="input-date">Data
+          <input class="form-control"type="date" name="input-date" id="input-date">
         </label>
-        <label for="input-date">Data
-          <input type="date" name="input-date" id="input-date">
-        </label>
-        <div id="div-checkbox">
-          <label for="input-checkbox-1">Concordo 1
+        <div class="text-light mb-4"id="div-checkbox">
+          <label class="me-5"for="input-checkbox-1">Concordo 1
             <input type="checkbox" name="input-checkbox-1" id="input-checkbox-1">
           </label>
           <label for="input-checkbox-2">Concordo 2
@@ -52,8 +60,8 @@
         </div>
       </section>
       <div>
-        <button type="reset">Apagar</button>
-        <button type="submit">Enviar</button>
+        <button class="btn btn-outline-light" type="reset">Apagar</button>
+        <button class="btn btn-dark" type="submit">Enviar</button>
       </div>
     </form>
   </main>
