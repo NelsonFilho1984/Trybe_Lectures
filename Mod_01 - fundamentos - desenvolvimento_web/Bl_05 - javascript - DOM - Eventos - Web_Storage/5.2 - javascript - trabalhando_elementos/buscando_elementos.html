@@ -1,0 +1,73 @@
+<!--DOM - Buscando Elementos-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document Object Model</title>
+  <script defer>
+    
+    //1. Acesse o elemento elementoOndeVoceEsta.
+    const ondeEstou = document.getElementById('elementoOndeVoceEsta');
+    
+    //2. Acesse pai a partir de elementoOndeVoceEsta e adicione uma color a ele.
+    const pai = ondeEstou.parentElement;
+    pai.style.color = 'red';
+
+    //3. Acesse o primeiroFilhoDoFilho e adicione um texto a ele. Você se lembra dos vídeos da aula anterior, como fazer isso?
+    const primeiroFilhoDoFilho = ondeEstou.firstElementChild;
+
+    primeiroFilhoDoFilho.innerText = "meu primeiro filho";
+    
+
+    //4. Acesse o primeiroFilho a partir de pai.
+    pai = document.querySelector('#pai');
+    pai.firstElementChild;
+
+    //5. Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta.
+    ondeEstou.previousElementSibling;
+
+    //6. Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta.
+    ondeEstou.nextSibling.textContent;
+
+    //7. Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta.
+    ondeEstou.nextElementSibling;
+
+    //8. Agora acesse o terceiroFilho a partir de pai.
+    pai.children[2];
+    pai.lastElementChild.previousElementSibling;
+    
+  </script>
+</head>
+<body>
+  <!--
+    Propriedades de Acesso/Navegação:
+
+   * parentNode: retorna o nó pai;
+   * parentElement: retorna o elemento pai;
+   * childNodes: retorna um NodeList com todos os nós filhos;
+   * children: retorna um HTMLCollection com todos os elementos filhos;
+   * firstChild: retorna o primeiro nó filho.
+   * firstElementChild: retorna o primeiro elemento filho;
+   * lastChild: retorna o último nó filho;
+   * lastElementChild: retorna o último elemento filho;
+   * nextSibling: retorna o próximo nó;
+   * nextElementSibling: retorna o próximo elemento;
+   * previousSibling: retorna o nó anterior.
+   * previousElementSibling: retorna o elemento anterior.
+  -->
+  <main id="paiDoPai">
+    <section id="pai">daddy-o
+      <section id="primeiroFilho"></section>
+      <section id="elementoOndeVoceEsta">
+        <section id="primeiroFilhoDoFilho"></section>
+        <section id="segundoEUltimoFilhoDoFilho"></section>
+      </section>
+      Atenção!
+      <section id="terceiroFilho"></section>
+      <section id="quartoEUltimoFilho"></section>
+    </section>
+  </main>
+</body>
+</html>

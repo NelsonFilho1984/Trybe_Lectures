@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document Object Model</title>
+  <script defer>
+    //🚀 Exercícios:
+    //1. Crie um irmão para elementoOndeVoceEsta.
+    const ondeEstou = document.getElementById("elementoOndeVoceEsta");
+
+    const bro = document.createElement('section');
+
+    //bro.
+
+
+    //2. Crie um filho para elementoOndeVoceEsta.
+    //3. Crie um filho para primeiroFilhoDoFilho.
+    //4. A partir desse filho criado, acesse terceiroFilho.
+  </script>
+</head>
+<body>
+  <main id="paiDoPai">
+  <section id="pai">pai
+    <section id="primeiroFilho">primeiroFilho</section>
+    <section id="elementoOndeVoceEsta">estouAqui
+      <section id="primeiroFilhoDoFilho">&nbsp;&nbsp;primeiroFilhoDoFilho</section>
+      <section id="segundoEUltimoFilhoDoFilho">&nbsp;&nbsp;segundoEUltimoFilhoDoFilho</section>
+    </section>
+    Atenção!
+    <section id="terceiroFilho">terceiroFilho</section>
+    <section id="quartoEUltimoFilho">quartoEUltimoFilho</section>
+  </section>
+</main>
+</body>
+</html>

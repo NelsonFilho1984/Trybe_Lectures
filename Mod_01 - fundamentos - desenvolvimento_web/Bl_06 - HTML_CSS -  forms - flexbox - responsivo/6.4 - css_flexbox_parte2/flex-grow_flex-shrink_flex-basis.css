@@ -1,0 +1,74 @@
+/*
+>>> Propriedades: flex-grow, flex-shrink, flex-basis:
+
+As três propriedades acima devem ser expostas em conjunto. flex-basis tem a função de definir o tamanho base de um item no container. O valor padrão dessa propriedade é auto - mantendo a flexibilidade do item de acordo com o tamanho do container.
+
+Caso o container não tenha espaço suficiente para dispor todos os itens adequadamente, a propriedade flex-shrink surge para garantir o quanto um item será comprimido em comparação aos demais.
+
+Por fim, flex-grow define o quanto de espaço vago será ocupado por um item.
+
+>>> 3-em-1:
+
+flex: grow/shrink/basis
+e.g. flex: 0 1 auto;
+*/
+
+.flex-container {
+  border: 2px solid black;
+  display: flex;
+  font-size: 20px;
+  height: 300px;
+  text-align: center;
+  width: 700px;
+}
+
+.flex-container div {
+  border: black;
+  border-radius: 8px;
+  border: 2px solid black;
+  flex-grow: 0; /*default: 0*/
+  flex-shrink: 1; /*default: 1*/
+  flex-basis: auto; /*default: auto*/
+  flex: 0 1 auto; /*3-em-1 flex: grow/shrink/basis*/
+}
+
+.box:nth-child(1) {
+  background-color: coral;
+}
+
+.box:nth-child(2) {
+  background-color: lightblue;
+}
+
+.box:nth-child(3) {
+  background-color: khaki;
+}
+
+.box:nth-child(4) {
+  background-color: pink;
+}
+
+
+div:nth-child(1) {
+  flex-grow: 4; /*default: 0*/
+  flex-shrink: 1; /*default: 1*/
+  flex-basis: auto; /*default: auto*/
+}
+
+div:nth-child(2) {
+  flex-grow: 3; /*default: 0*/
+  flex-shrink: 1; /*default: 1*/
+  flex-basis: auto; /*default: auto*/
+}
+
+div:nth-child(3) {
+  flex-grow: 2; /*default: 0*/
+  flex-shrink: 1; /*default: 1*/
+  flex-basis: auto; /*default: auto*/
+}
+
+div:nth-child(4) {
+  flex-grow: 1; /*default: 0*/
+  flex-shrink: 1; /*default: 1*/
+  flex-basis: auto; /*default: auto*/
+}

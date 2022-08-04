@@ -1,0 +1,98 @@
+<!--Flexbox/CSS-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!--
+    CDN [Content Delivery Network] CSS Bootstrap compiled framework:
+
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  -->
+  <title>Flexbox/CSS</title>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    body{
+      background-color: grey;
+      color: chartreuse;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    h1, h2 {
+      margin: 20px;
+    }
+
+    div {
+      width: 200px;
+      min-height: 70px;
+      border: 2px solid chartreuse;
+      margin: 20px;
+    }
+
+    p {
+      background-color:darkmagenta;
+      border: 2px solid black;
+      color:white;
+    }
+
+    .teste-inline-block p {
+      display: inline-block;
+      height: 50px;
+    }
+
+    .teste-inline p {
+      display: inline;
+    }
+
+    .teste-flex {
+      display: flex;
+      flex-direction: row-reverse;/*default: row*/
+      flex-wrap: nowrap;/*default: nowrap*/
+      flex-flow:row-reverse nowrap;
+      /*flex-flow: é uma junção do 'flex-direction' e 'flex-flow'*/
+    }
+  </style>
+</head>
+<body>
+  <h1>Flexbox</h1>
+  <main>
+    <!--O comportemento padrão da tag 'div' e da 'p' é 'diplay: block'-->
+    <h2>display: block [default]</h2>
+    <div>
+      <p>Elemento 1</p>
+      <p>Elemento 2</p>
+      <p>Elemento 3</p>
+    </div>
+    <h2>display: inline</h2>
+    <div class="teste-inline">
+      <p>Elemento 1</p>
+      <p>Elemento 2</p>
+      <p>Elemento 3</p>
+    </div>
+    <h2>display: inline-block</h2>
+    <div class="teste-inline-block">
+      <p>Elemento 1</p>
+      <p>Elemento 2</p>
+      <p>Elemento 3</p>
+    </div>
+    <h2>display: flex</h2>
+    <div class="teste-flex">
+      <p>Elemento 1</p>
+      <p>Elemento 2</p>
+      <p>Elemento 3</p>
+    </div>
+    <h2>Flexbox</h2>
+    <h3>flex-direction, flex-wrap, flex-flow e reverse</h3><br><br>
+    <section style="color: white">
+      A propriedade flex-direction é aquela que define a direção dos flex items e modifica quem é o Main Axis. Por padrão essa propriedade é row (linha), com isso os elementos ficam um ao lado do outro. Os outros valores que essa propriedade possui são o row-reverse, os itens ficam em linha reversa, o column, onde os itens ficam em uma única coluna, um embaixo do outro, e o column-reverse, em que os itens também ficam um embaixo do outro, porém em ordem reversa.<br><br>
+      Já a propriedade flex-wrap define se os itens devem quebrar ou não a linha, sendo que por padrão esse propriedade é nowrap, ou seja, os itens não quebram a linha. Os valores que fazem com que a linha quebre são o wrap, que quebra a linha, e o wrap-reverse, que quebra a linha na direção contrária.<br><br>
+      Por sua vez, o flex-flow é um atalho para as propriedades flex-direction e flex-wrap, o primeiro valor que recebe é o do flex-direction e o segundo o do flex-wrap.<br><br>
+    </section><br><br>
+  </main>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Click Counter</title>
+  <style>
+    body {
+      background-color: gray;
+      color: chartreuse;
+      display: flex;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    h1 {
+      border: 2px solid blue;
+      font-family:Verdana, Geneva, Tahoma, sans-serif;
+      text-align: center;
+    }
+
+    #container {
+      align-items: center;
+      background-color: darkmagenta;
+      border-radius: 5px;
+      display: flex;
+      height:100px;
+      justify-content: center;
+      width: 200px;
+    }
+
+    #counter-btn {
+      border: none;
+      border-radius: 5px;
+      box-shadow: 3px 3px rgba(128, 255, 0, 0.758);
+      height: 40px;
+      width: 100px;
+    }
+
+    #txt-div {
+      border: 2px solid red;
+      height: 100px;
+      margin-top: 40px;
+      width: 200px;
+      text-align: center;
+    }
+
+    #span {
+      border: 2px solid black;
+      color:white;
+      font-size: xx-large;
+    }
+  </style>
+  <script defer>
+    /*
+    🚀 3. Crie uma página com um contador de cliques
+    Sua página deve conter:
+
+     * Um botão ao qual será associado um event listener;
+    
+     * Uma variável clickCount no arquivo JavaScript que acumule o número de clicks no botão;
+
+     * Um campo no HTML que vá atualizando a quantidade de clicks no botão conforme a variável clickCount é atualizada.
+    */
+    let clickCount = 0;
+    const counterButton = document.getElementById('counter-btn');
+    const txtDisplay = document.getElementById('span');
+
+    counterButton.addEventListener('click', () => txtDisplay.innerHTML = clickCount += 1);
+    
+
+  </script>
+</head>
+<body>
+  <h1>Click Counter</h1>
+  <main id="main">
+   <div>
+      <div id="container">
+        <button id="counter-btn" onclick=""><b>Click me!</b></button>
+      </div>
+      <div id="txt-div">
+        <span id="span"></span>
+      </div>
+   </div>
+  </main>
+</body>
+</html>

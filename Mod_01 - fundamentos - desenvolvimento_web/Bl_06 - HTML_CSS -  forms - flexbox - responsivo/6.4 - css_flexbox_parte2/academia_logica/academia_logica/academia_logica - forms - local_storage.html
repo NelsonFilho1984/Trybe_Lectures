@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="academia_logica - forms - local_storage.css">
+  <title>Hotel Form</title>
+</head>
+
+<body>
+
+  <header class="header-trybe">
+    <div>
+      <img src="img/hotel_pngwing.png" alt="generic_hotel_logo">
+    </div>
+    <div>
+      <h1>Formulário Hotel</h1>
+    </div>
+  </header>
+
+  <main>
+    <h2>Reserva de quartos</h2>
+    <form action="">
+      <section class="hotel-form">
+        <label for=""> Check-in
+          <input class="inputCheckin" type="date" name="" id="">
+        </label>
+        <label for=""> Check-out
+          <input class="inputCheckout" type="date" name="" id="">
+        </label>
+      </section>
+      <section class="hotel-form">
+        <label for="">Tipo de Quarto <br> 
+          <input class="bedroom" type="radio" name="input-room" id="input-room-comum">Comum
+          <input class="bedroom" type="radio" name="input-room" id="input-room-club">Club
+          <input class="bedroom" type="radio" name="input-room" id="input-room-luxo">Luxo
+        </label>
+      </section>
+      <section class="hotel-form">
+        <select name="" id="">
+          <option class="nPessoas" value="">1 pessoa</option>
+          <option class="nPessoas" value="">2 pessoas</option>
+          <option class="nPessoas" value="">3 pessoas</option>
+          <option class="nPessoas" value="">4 pessoas</option>
+        </select>
+      </section>
+      <section class="hotel-form">
+        <textarea class="obs" name="" id="" cols="30" rows="10" placeholder="Observações adicionais"></textarea>
+      </section>
+      <button type="submit" id="submit-btn">Reservar</button>
+      <section class="list-section">
+        <label for=""><h3>Lista de Reservas</h3>
+          <ol></ol>
+          <button id="clear-btn">Apagar</button>
+        </label>
+      </section>
+    </form>
+  </main>
+
+  <script src="academia_logica - forms - local_storage.js"></script>
+
+</body>
+
+</html>

@@ -24,3 +24,6 @@
 *.code-workspace
 
 # Fim de https://www.toptal.com/developers/gitignore/api/visualstudiocode
+
+#Ignora testes do Jest
+node_modules/
