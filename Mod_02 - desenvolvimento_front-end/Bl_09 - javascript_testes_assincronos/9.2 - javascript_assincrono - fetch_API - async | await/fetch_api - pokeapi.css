@@ -1,0 +1,21 @@
+h1 {
+  font-size: 44px;
+  text-align: center;
+}
+
+ol {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+li {
+  font-size: 28px;
+  margin: 30px;
+  text-align: center;
+  text-decoration: none;
+}
+
+li img {
+  width: 120px;
+}

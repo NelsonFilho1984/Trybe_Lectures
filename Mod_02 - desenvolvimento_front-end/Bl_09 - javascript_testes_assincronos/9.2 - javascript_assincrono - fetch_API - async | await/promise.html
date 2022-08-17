@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Promise</title>
+</head>
+<body>
+  <h1>Promise</h1>
+  <p>DevTools / Console /</p>
+
+
+  <script>
+    const novoIdioma = (idioma, frase) => {
+      return new Promise((resolve, reject) => {
+        if(idioma === 'francês') {
+        resolve(frase);
+        } else {
+          reject(`Perdão! não sei falar ${idioma}, mas sou fluente em Javascript.`);
+        }
+      });
+    }
+
+    const executaPromessa = () => {
+      novoIdioma('alemão', `E também sou fluente em JavaScript.`)
+        .then((response) => console.log(response))
+        .catch((error) => console.log(error));
+    }
+
+    window.onload = executaPromessa();
+  </script>
+
+
+</body>
+</html>
+
